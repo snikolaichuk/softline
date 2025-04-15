@@ -1,0 +1,17 @@
+//global
+@use './global/reset';
+@use './global/fonts';
+
+//block
+@use './block/container';
+@use './block/nav';
+@use './block/header';
+@use './block/about';
+@use './block/offices';
+@use './block/regions';
+@use './block/mission';
+@use './block/subtitle';
+@use './block/article';
+@use './block/business';
+@use './block/compensation';
+@use './block/corporate';

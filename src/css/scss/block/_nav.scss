@@ -1,0 +1,23 @@
+.nav {
+    &__list {
+        display: flex;
+        gap: 20px;
+
+        @media(max-width: 320px) {
+            flex-wrap: wrap;
+            column-gap: 10px;
+            row-gap: 5px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+
+        @media(max-width:  320px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+} 

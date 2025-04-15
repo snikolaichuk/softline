@@ -1,0 +1,35 @@
+.business {
+    padding-bottom: 100px;
+
+    @media(max-width: 320px) {
+        padding-bottom: 50px;
+    }
+
+    &__container {
+        padding: 0;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 22px;
+        column-gap: 20px;
+
+        --gap: 20px;
+        --offsets: 1;
+        
+        @media(max-width: 320px) {
+            row-gap: 10px;
+            column-gap: 0;
+            height: auto;
+        }
+    }
+
+    &__item {
+        width: calc((100% - var(--gap) * var(--offsets)) / (var(--offsets) + 1));
+
+        @media(max-width: 320px) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.compensation {
+    padding-bottom: 100px;
+
+    &__block {
+        padding: 80px 30px;
+
+        @media(max-width: 320px) {
+            padding: 24px 5px;
+        }
+
+        & h2 {
+            @media(max-width: 320px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__main {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 75px;
+        border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+
+        @media(max-width: 320px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 24px;
+        }
+    }
+
+    &__additional {
+        padding-top: 70px;
+
+        @media(max-width: 320px) {
+            padding-top: 24px;
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: 40px;
+        line-height: 120%;
+        font-weight: 600;
+        color: #444;
+
+        @media(max-width: 320px) {
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+
+        &--red {
+            color: #b01736;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        --gap: 16px;
+        --offsets: 4;
+
+        @media(max-width: 320px) {
+            flex-wrap: wrap;
+            column-gap: 8px;
+            row-gap: 25px;
+
+            --gap: 10px;
+            --offsets: 1;
+        }
+    }
+
+    &__item {
+        width: calc((100% - var(--gap) * var(--offsets)) / (var(--offsets) + 1));
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__img {
+        min-height: 110px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &--dms {
+            background-image: url('../../../assets/images/compensation-1.svg');
+        }
+    
+        &--birthday {
+            background-image: url('../../../assets/images/compensation-2.svg');
+        }
+    
+        &--mobile {
+            background-image: url('../../../assets/images/compensation-3.svg');
+        }
+    
+        &--sport {
+            background-image: url('../../../assets/images/compensation-4.svg');
+        }
+    
+        &--lti {
+            background-image: url('../../../assets/images/compensation-5.svg');
+        }
+
+        &--office {
+            background-image: url('../../../assets/images/compensation-6.svg');
+        }
+
+        &--mortgage {
+            background-image: url('../../../assets/images/compensation-7.svg');
+        }
+    }
+
+    &__descr {
+        max-width: 178px;
+        align-self: center;
+        text-align: center;
+    }
+}

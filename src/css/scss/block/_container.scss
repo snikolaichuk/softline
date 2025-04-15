@@ -1,0 +1,38 @@
+.container {
+    margin: 0 auto;
+    padding: 0 70px;
+    max-width: 1250px;
+    width: 100%;
+
+    @media (max-width: 320px) {
+        max-width: 320px;
+        padding: 0 20px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 120%;
+        color: #cd0f41;
+
+        @media (max-width: 320px) {
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+    }
+
+    &__descr {
+        text-align: center;
+        font-size: 32px;
+        line-height: 120%;
+
+        @media (max-width: 320px) {
+            margin-bottom: 50px;
+            font-size: 16px;
+            text-align: start;
+        }
+    }
+}  

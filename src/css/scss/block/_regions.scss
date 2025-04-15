@@ -1,0 +1,28 @@
+.regions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__link {
+        text-align: start;
+        font-family: 'Proxima Nova';
+        font-size: 18px;
+        line-height: 20px; 
+        font-weight: 400;
+        color: #444;
+    }
+
+    &__link--weight {
+        font-weight: 600;
+    }
+
+    &__summary {
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "test-softline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "dev": "webpack serve --mode=development",
+    "svpug": "svpug -i src/svgs -o views/icons"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "filemanager-webpack-plugin": "^8.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "pug-plugin": "^6.0.0",
+    "sass": "^1.86.3",
+    "sass-loader": "^16.0.5",
+    "svpug": "^0.1.4",
+    "webpack": "^5.99.5",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "swiper": "^11.2.6"
+  }
+}

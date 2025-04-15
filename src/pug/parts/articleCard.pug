@@ -1,0 +1,5 @@
+mixin articleCard(title, text, className)
+  article.article.article__img(class!=`article__img--${className}`)
+    details.article__details 
+      summary.article__summary: h3.article__subtitle= title 
+      p.article__descr= text

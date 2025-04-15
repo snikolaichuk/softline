@@ -1,0 +1,36 @@
+.about {
+    padding: 79px 0;
+
+    @media(max-width: 320px) {
+        padding-top: 27px;
+    }
+
+    &__list {
+        display: none;
+
+
+        --gap:8px;
+        --offsets: 1;
+
+        @media (max-width: 320px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 28px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc((100% - var(--gap) * var(--offsets)) / (var(--offsets) + 1));
+    }
+
+    &__big-text {
+        font-size: 40px;
+        line-height: 80%;
+        font-weight: 600;
+        color: #a30c33;
+    }
+}
