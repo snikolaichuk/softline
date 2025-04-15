@@ -1,7 +1,0 @@
-mixin regionsList(items= [])
-  details.regions(open)
-    summary.regions__summary.regions__link.regions__link--weight= items[0]
-    ul.regions__list 
-      each item, index in items
-        if index !== 0 
-          li.regions__item: a.regions__link(href="#")= item
