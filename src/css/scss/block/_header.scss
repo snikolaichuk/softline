@@ -1,4 +1,11 @@
 .header {
+    &--padding {
+        @media(max-width: 320px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
     &__container {
         display: flex;
         padding-top: 30px;

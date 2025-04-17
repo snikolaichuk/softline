@@ -1,7 +1,10 @@
 .regions {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+
+    &[open] {
+        gap: 12px;
+    }
 
     &__list {
         display: flex;
@@ -16,6 +19,11 @@
         line-height: 20px; 
         font-weight: 400;
         color: #444;
+
+        @media(max-width: 320px) {
+            font-size: 14px;
+            line-height: 14px;
+        }
     }
 
     &__link--weight {
@@ -24,5 +32,24 @@
 
     &__summary {
         pointer-events: none;
+
+        @media(max-width: 320px) {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            pointer-events: auto; 
+        }
+
+        &::after {
+            content: '';
+
+            @media(max-width: 320px) {
+                width: 8px;
+                height: 5px;
+                background-image: url('../../../assets/images/regions-arrow.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
     }
 }

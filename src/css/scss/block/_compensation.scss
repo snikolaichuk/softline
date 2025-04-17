@@ -1,6 +1,10 @@
 .compensation {
     padding-bottom: 100px;
 
+    @media(max-width: 320px) {
+        padding-bottom: 50px;
+    }
+
     &__block {
         padding: 80px 30px;
 
@@ -86,6 +90,10 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+
+        @media(max-width: 320px) {
+            min-height: 80px;
+        }
 
         &--dms {
             background-image: url('../../../assets/images/compensation-1.svg');

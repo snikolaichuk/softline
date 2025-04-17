@@ -16,9 +16,16 @@ export function openOfficesMenu() {
         menuTop.classList.toggle('index-1000');
 
         const menuBlock = document.querySelector('.offices__menu');
-        menuBlock.classList.toggle('none');
         menuBlock.classList.toggle('index-1000');
         menuBlock.classList.toggle('anim');
+
+        const mediaQuery = window.matchMedia('(max-width: 320px)');
+        if (mediaQuery.matches) {
+            const details = document.querySelectorAll('.regions');
+            details.forEach((region) => {
+                region.open = false;
+            })
+        }
     })
 };
 
@@ -74,6 +81,9 @@ export function slider() {
             clickable: true,
             bulletClass: 'swiper-pagination-bullet corporate__point',
             bulletActiveClass: 'swiper-pagination-bullet-active corporate__point--active',
+        },
+        breakpoints: {
+            slidesPerView: 1,
         }
     })
 }

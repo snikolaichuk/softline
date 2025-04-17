@@ -54,6 +54,10 @@
         & img {
             margin-bottom: 28px;
             object-fit: cover;
+
+            @media(max-width: 320px) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -61,6 +65,10 @@
         display: flex;
         gap: 10px;
         bottom: 0 !important;
+
+        @media(max-width: 320px) {
+            display: none;
+        }
     }
 
     &__point {

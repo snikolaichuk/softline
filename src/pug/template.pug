@@ -22,36 +22,39 @@ html(lang= 'ru')
               span.about__big-text= item.bigText
               span.about__span= item.text
     section.offices
-      .offices__bg
-      .container.offices__container
-        include parts/regionsList
-        include data/map
-        include data/offices
-        include parts/map
-        .offices__top.shadow
-          h2.offices__subtitle: button.offices__btn#menu-btn Офисы Softline
-          ul.offices__list
-            each item, index in allOffices
-              if (index === 0)
-                li.offices__item 
-                  input(type="radio", value=item.value, name="regions", id=`regions-${index}`, checked).offices__checkbox
-                  label.offices__label(for!=`regions-${index}`)= item.title
-              else
-                li.offices__item 
-                  input(type="radio", value=item.value, name="regions", id=`regions-${index}`).offices__checkbox
-                  label.offices__label(for!=`regions-${index}`)= item.title
-        .offices__menu.shadow.none
-          ul.offices__regions-list
-            each name in allRegions 
-              li.offices__region-item
-                +regionsList(name)
-        .offices__map
-          +svg-map()
+      .offices--padding
+        .offices__bg
+        .container.offices__container
+          include parts/regionsList
+          include data/map
+          include data/offices
+          include parts/map
+          .offices__top.shadow
+            details 
+              summary: h2.offices__subtitle.offices__btn#menu-btn Офисы Softline
+              .offices__menu.shadow
+                ul.offices__regions-list
+                  each name in allRegions 
+                    li.offices__region-item
+                      +regionsList(name)
+            ul.offices__list
+              each item, index in allOffices
+                if (index === 0)
+                  li.offices__item 
+                    input(type="radio", value=item.value, name="regions", id=`regions-${index}`, checked).offices__checkbox
+                    label.offices__label(for!=`regions-${index}`)= item.title
+                else
+                  li.offices__item 
+                    input(type="radio", value=item.value, name="regions", id=`regions-${index}`).offices__checkbox
+                    label.offices__label(for!=`regions-${index}`)= item.title
+          .offices__map
+            +svg-map()
     section.mission
-      .container.mission__container 
-        .mission__content
-          h2.subtitle.subtitle--white.mb-40 Миссия Softline
-          p.mission__descr Мы&nbsp;помогаем организациям трансформироваться, работать эффективно и&nbsp;безопасно в&nbsp;условиях цифровой экономики.
+      .mission--padding
+        .container.mission__container 
+          .mission__content
+            h2.subtitle.subtitle--white.mb-40 Миссия Softline
+            p.mission__descr Мы&nbsp;помогаем организациям трансформироваться, работать эффективно и&nbsp;безопасно в&nbsp;условиях цифровой экономики.
     section.business 
       .container.business__container 
         h2.subtitle.mb-55 Направления бизнеса

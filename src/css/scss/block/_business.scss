@@ -6,7 +6,9 @@
     }
 
     &__container {
-        padding: 0;
+        @media(min-width: 321px) {
+            padding: 0;
+        }
     }
     
     &__list {
